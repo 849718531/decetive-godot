@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ckugetha1datk"]
+
+[ext_resource type="Texture2D" uid="uid://ckrvoxm0wn568" path="res://icon.svg" id="1_mnwme"]
+[ext_resource type="Script" uid="uid://d214d6t3cq1j2" path="res://角色/悟空.gd" id="1_uikv1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ilm8"]
+size = Vector2(110.00003, 116.25002)
+
+[sub_resource type="GDScript" id="GDScript_fr3vu"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="悟空" type="CharacterBody2D" unique_id=1117042260]
+script = ExtResource("1_uikv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1266077762]
+position = Vector2(1.5258789e-05, -0.6249962)
+shape = SubResource("RectangleShape2D_1ilm8")
+script = SubResource("GDScript_fr3vu")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1837293998]
+position = Vector2(1.5258789e-05, -1.2499771)
+texture = ExtResource("1_mnwme")

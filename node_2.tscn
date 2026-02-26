@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dyv8feptnokov"]
+
+[ext_resource type="Script" uid="uid://cpup4puu0j8dp" path="res://node_2.gd" id="1_0ku8x"]
+[ext_resource type="PackedScene" uid="uid://ckugetha1datk" path="res://角色/悟空.tscn" id="1_yj20n"]
+[ext_resource type="Texture2D" uid="uid://ckrvoxm0wn568" path="res://icon.svg" id="2_02sgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ku8x"]
+size = Vector2(817, 87)
+
+[node name="游戏场景" type="Node2D" unique_id=587734819]
+position = Vector2(3, -1)
+script = ExtResource("1_0ku8x")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1479083872]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=15608594]
+position = Vector2(155.76001, 290.05743)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1865191007]
+position = Vector2(-0.85009766, 1.0995178)
+shape = SubResource("RectangleShape2D_0ku8x")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1248285847]
+position = Vector2(-3.429657, -0.8575134)
+scale = Vector2(6.412563, 0.63826895)
+texture = ExtResource("2_02sgt")
+
+[node name="charater" parent="." unique_id=754818695 instance=ExtResource("1_yj20n")]
+position = Vector2(351.5487, -102.8923)
+
+[node name="悟空" parent="." unique_id=1117042260 instance=ExtResource("1_yj20n")]
+unique_name_in_owner = true
+position = Vector2(318.96606, 116.611206)
+
+[node name="Camera2D" type="Camera2D" parent="悟空" unique_id=1577377174]
+position = Vector2(-318.96606, -116.611206)
